@@ -19,20 +19,25 @@ const App = () => {
     fetchData();
   }, []);
 
-  const mixFunction = () => {
-    return info.map((element) => (
+  
+  const mixFunction = () =>{
+
+    return info.map((element)=>(
       <div key={element.id}>
-        <div>ad: {element.name}</div>
-        <div>soyad: {element.username}</div>
+        <h1>Adiniz : {element.name}</h1>
+        <h1>Soyadiniz : {element.username}</h1>
       </div>
-    ));
-  };
+    ))
+  }
+
 
   return (
-    <div>
+    <>
+
       {mixFunction()}
-    </div>
-  );
+
+    </>
+  )
 };
 
 export default App;
